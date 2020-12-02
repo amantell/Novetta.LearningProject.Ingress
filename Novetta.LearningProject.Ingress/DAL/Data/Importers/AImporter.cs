@@ -15,15 +15,6 @@ namespace Novetta.LearningProject.Ingress.DAL.Data.Importers
         ConnectionMultiplexer connectionMultiplexer;
         IDatabase database;
 
-        //public Import()
-        //{
-        //    connectionMultiplexer = ConnectionMultiplexer.Connect("127.0.0.1:6379,password=password");
-        //    database = connectionMultiplexer.GetDatabase();
-        //}
-
-        public virtual void ImportData(Data.IAssembler assembler)
-        {
-
-        }
+        public virtual void ImportData(Data.IAssembler assembler) {}
     }
 }

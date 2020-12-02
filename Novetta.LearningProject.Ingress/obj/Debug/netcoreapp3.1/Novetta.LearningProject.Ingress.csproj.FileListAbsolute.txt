@@ -79,4 +79,3 @@ C:\Projects\Novetta.LearningProject.Ingress\Novetta.LearningProject.Ingress\obj\
 C:\Projects\Novetta.LearningProject.Ingress\Novetta.LearningProject.Ingress\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
 C:\Projects\Novetta.LearningProject.Ingress\Novetta.LearningProject.Ingress\bin\Debug\netcoreapp3.1\ServiceStack.Redis.dll
 C:\Projects\Novetta.LearningProject.Ingress\Novetta.LearningProject.Ingress\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
-C:\Projects\Novetta.LearningProject.Ingress\Novetta.LearningProject.Ingress\obj\Debug\netcoreapp3.1\Novetta.LearningProject.Ingress.csprojAssemblyReference.cache

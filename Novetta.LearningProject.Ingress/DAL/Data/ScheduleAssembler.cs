@@ -32,20 +32,31 @@ namespace Novetta.LearningProject.Ingress.DAL.Data
 
         public List<object> GetData()
         {
-            List<object> flights = new List<object>(); 
+            List<object> flights = new List<object>();
 
-            while (flights.Count < 360)
+            List<Arrival> arrivals = new List<Arrival>();
+            List<Departure> departures = new List<Departure>();
+
+            try
             {
-                if (flights.Count % 2 == 0)
+                while (arrivals.Count < 180)
                 {
-                    flights.Add(GetArrival());
+                    arrivals.Add(GetArrival());
                 }
-                else
-                {
-                    flights.Add(GetDeparture());
-                }
-            }
 
+                flights.AddRange(arrivals.OrderBy(a => a.ToTime));
+
+                while (departures.Count < 180)
+                {
+                    departures.Add(GetDeparture());
+                }
+
+                flights.AddRange(departures.OrderBy(d => d.ToTime));
+
+            } catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
             return flights;
         }
 
@@ -53,37 +64,40 @@ namespace Novetta.LearningProject.Ingress.DAL.Data
         {
             DateTime[] startEndTimes = GetStartEndTimes();
 
-            Random random = new Random();
-            int fromIndex = random.Next(0, _cities.Count - 1);
-            int toIndex = random.Next(0, _cities.Count - 1);
-
-            while (toIndex == fromIndex)
-            {
-                toIndex = random.Next(0, _cities.Count - 1);
-            };
+            int[] cityIndexes = GetCityIndexes();
 
             return new Arrival()
             {
-                FromCity = _cities[fromIndex],
-                ToCity = _cities[toIndex],
+                FromCity = _cities[cityIndexes[0]],
+                ToCity = _cities[cityIndexes[1]],
                 FromTime = startEndTimes[0],
                 ToTime = startEndTimes[1],
                 Flight = GetAirline(),
-                Notifications = GetNotification()
+                Notifications = GetNotification(true),
+                Aircraft = "737"
             };
         }
 
-        private string GetNotification()
+        private string GetNotification(bool isArrival)
         {
-
             Random random = new Random();
             int result = random.Next(0, 4);
 
-            if (result == 4)
+            string flightType = (isArrival ? "arriving" : "departing");
+
+            switch (result)
             {
-                return string.Format(@"The plane is delayed {0} minutes.", random.Next(0, 15).ToString());
+                case 0:
+                case 1:
+                case 2:
+                    return string.Format(@"The plane is {0} on time.", flightType);
+                case 3:
+                    return string.Format(@"The plane is {0} {1} minutes early.", flightType, random.Next(0, 15).ToString());
+                case 4:
+                    return string.Format(@"The plane is delayed {0} minutes.", random.Next(0, 15).ToString());
             }
-            return string.Empty;
+
+            return string.Format(@"The plane is {0} on time.", flightType);
         }
 
         private Departure GetDeparture()
@@ -98,7 +112,8 @@ namespace Novetta.LearningProject.Ingress.DAL.Data
                 FromTime = startEndTimes[0],
                 ToTime = startEndTimes[1],
                 Flight = GetAirline(),
-                Notifications = GetNotification()
+                Notifications = GetNotification(false),
+                Aircraft = "747"
             };
         }
 

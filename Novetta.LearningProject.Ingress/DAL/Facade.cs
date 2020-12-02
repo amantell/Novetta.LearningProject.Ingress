@@ -20,13 +20,30 @@ namespace Novetta.LearningProject.Ingress.DAL
 
         public Facade()
         {
+            Initialize();
             GenerateData();
         }
 
+        private void Initialize()
+        {
+            try
+            {
+                ConnectionMultiplexer connectionMultiplexer = ConnectionMultiplexer.Connect("localhost:6379");
+                IDatabase cache = connectionMultiplexer.GetDatabase();
+                cache.KeyDelete("airlines");
+                cache.KeyDelete("cities");
+                cache.KeyDelete("arrivals");
+                cache.KeyDelete("departures");
+                connectionMultiplexer.Close();
+            } catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
         private void GenerateData()
         {
             dataFactory = new Data.DataFactory();
-            
+
             assembler = dataFactory.GetAssembler("city");
             Data.Importers.AImporter importer = new Data.Importers.CityImporter();
             importer.ImportData(assembler);

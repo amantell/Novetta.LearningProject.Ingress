@@ -11,7 +11,8 @@ namespace Novetta.LearningProject.Ingress
             Commands.DataCommand dataCommand = new Commands.DataCommand();
 
             while (now.Hour < 23) {
-                if (now.Minute % 2 == 0 && now.Second == 0)
+                //if (now.Minute % 2 == 0 && now.Second == 0)
+                if (now.Second == 0 || now.Second == 30)
                 {
                     if (dataCommand.Validate())
                     {

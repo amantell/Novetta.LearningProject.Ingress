@@ -16,6 +16,8 @@ namespace Novetta.LearningProject.Ingress.DAL.Data
                     return new AirlineAssembler();
                 case "schedule":
                     return new ScheduleAssembler();
+                case "time":
+                    return new TimeAssembler();
             }
             throw new Exception("No assembler returned.");
         }
