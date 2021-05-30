@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj": {}
+    "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj": {
+    "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj",
+        "projectUniqueName": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj",
         "projectName": "Novetta.LearningProject.Consumer.Departures",
-        "projectPath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj",
+        "projectPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\Novetta.LearningProject.Consumer.Departures.csproj",
         "packagesPath": "C:\\Users\\adam_\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\obj\\",
+        "outputPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Departures\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

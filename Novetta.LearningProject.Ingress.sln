@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novetta.LearningProject.Ingress", "Novetta.LearningProject.Ingress\Novetta.LearningProject.Ingress.csproj", "{1C1B30D2-AA38-424E-8D1A-A692D381D2F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novetta.LearningProject.Ingress", "Novetta.LearningProject.Ingress\Novetta.LearningProject.Ingress.csproj", "{1C1B30D2-AA38-424E-8D1A-A692D381D2F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novetta.LearningProject.Consumer.Arrivals", "Novetta.LearningProject.Consumer.Arrivals\Novetta.LearningProject.Consumer.Arrivals.csproj", "{6D9F92FC-3FCA-436C-B064-3F47100850A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novetta.LearningProject.Consumer.Arrivals", "Novetta.LearningProject.Consumer.Arrivals\Novetta.LearningProject.Consumer.Arrivals.csproj", "{6D9F92FC-3FCA-436C-B064-3F47100850A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novetta.LearningProject.Consumer.Departures", "Novetta.LearningProject.Consumer.Departures\Novetta.LearningProject.Consumer.Departures.csproj", "{53AB9316-72AB-4A2C-AAE4-FAE051423E71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novetta.LearningProject.Consumer.Departures", "Novetta.LearningProject.Consumer.Departures\Novetta.LearningProject.Consumer.Departures.csproj", "{53AB9316-72AB-4A2C-AAE4-FAE051423E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novetta.LearningProject.DataGenerator", "Novetta.LearningProject.DataGenerator\Novetta.LearningProject.DataGenerator.csproj", "{00979342-2C4D-4CB5-AC35-47B14E140382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novetta.LearningProject.CustomTypes", "Novetta.LearningProject.CustomTypes\Novetta.LearningProject.CustomTypes.csproj", "{708D66C2-5D8E-4A17-850E-09FD0E7F1EA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{53AB9316-72AB-4A2C-AAE4-FAE051423E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53AB9316-72AB-4A2C-AAE4-FAE051423E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53AB9316-72AB-4A2C-AAE4-FAE051423E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00979342-2C4D-4CB5-AC35-47B14E140382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00979342-2C4D-4CB5-AC35-47B14E140382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00979342-2C4D-4CB5-AC35-47B14E140382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00979342-2C4D-4CB5-AC35-47B14E140382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708D66C2-5D8E-4A17-850E-09FD0E7F1EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708D66C2-5D8E-4A17-850E-09FD0E7F1EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708D66C2-5D8E-4A17-850E-09FD0E7F1EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708D66C2-5D8E-4A17-850E-09FD0E7F1EA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

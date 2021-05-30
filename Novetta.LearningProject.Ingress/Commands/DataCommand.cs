@@ -21,7 +21,7 @@ namespace Novetta.LearningProject.Ingress.Commands
                 Data = _facade.GetScheduleData(DateTime.Now);
                 if (Data == null) throw new Exception("no results were stored in the database.");
 
-                PublishCommand publishCommand = new PublishCommand(this);
+                PublishCommand publishCommand = new PublishCommand(Data);
                 return publishCommand.Validate();
             
             } catch (Exception exception)

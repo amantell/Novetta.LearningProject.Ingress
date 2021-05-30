@@ -7,24 +7,38 @@ namespace Novetta.LearningProject.Ingress
     {
         static void Main(string[] args)
         {
-            DateTime now = DateTime.Now;
-            Commands.DataCommand dataCommand = new Commands.DataCommand();
+            Console.WriteLine("Starting Ingress");
+            Console.WriteLine("Type any alphanumeric key and then hit 'Enter' to end the program.");
 
-            while (now.Hour < 23) {
-                //if (now.Minute % 2 == 0 && now.Second == 0)
-                if (now.Second == 0 || now.Second == 30)
+            DAL.Facade _facade = new DAL.Facade();
+
+            bool isRunning = true;
+
+            while (isRunning)
+            {
+                if (Console.ReadLine() != string.Empty) isRunning = false;
+                if (_facade.IsDataUpdated)
                 {
-                    if (dataCommand.Validate())
+                    try
                     {
-                        Console.WriteLine("Successful data ingress");
+                        Dictionary<string, List<string>> Data = _facade.GetScheduleData(DateTime.Now);
+                        if (Data == null) throw new Exception("no results were stored in the database.");
+
+                        Commands.PublishCommand publishCommand = new Commands.PublishCommand(Data);
+                        publishCommand.Validate();
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        Console.WriteLine(dataCommand.Error);
+                        Console.WriteLine(ex.Message);
+                    }
+                    finally {
+                        _facade.IsDataUpdated = false;
                     }
                 }
-                now = DateTime.Now;
             };
+
+            _facade.Shutdown();
+            Console.WriteLine("Closing Ingress");
         }
     }
 }

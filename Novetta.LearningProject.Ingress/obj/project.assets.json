@@ -2123,6 +2123,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Novetta.LearningProject.CustomTypes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Novetta.LearningProject.CustomTypes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Novetta.LearningProject.CustomTypes.dll": {}
+        }
       }
     }
   },
@@ -7337,11 +7347,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Novetta.LearningProject.CustomTypes/1.0.0": {
+      "type": "project",
+      "path": "../Novetta.LearningProject.CustomTypes/Novetta.LearningProject.CustomTypes.csproj",
+      "msbuildProject": "../Novetta.LearningProject.CustomTypes/Novetta.LearningProject.CustomTypes.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Newtonsoft.Json >= 12.0.3",
+      "Novetta.LearningProject.CustomTypes >= 1.0.0",
       "RabbitMQ.Client >= 6.2.1",
       "ServiceStack >= 5.10.2",
       "ServiceStack.Redis >= 5.10.2",
@@ -7355,11 +7371,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
+      "projectUniqueName": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
       "projectName": "Novetta.LearningProject.Ingress",
-      "projectPath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
+      "projectPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
       "packagesPath": "C:\\Users\\adam_\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\obj\\",
+      "outputPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -7379,7 +7395,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\Novetta.LearningProject.CustomTypes.csproj": {
+              "projectPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\Novetta.LearningProject.CustomTypes.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -7428,7 +7448,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,47 +14,28 @@ namespace Novetta.LearningProject.Ingress.DAL
     {
         ConnectionMultiplexer connectionMultiplexer;
         IDatabase database;
+        ISubscriber subscriber;
 
-        Data.DataFactory dataFactory;
-        Data.IAssembler assembler;
+        private bool _isDataUpdated = false;
+        public bool IsDataUpdated
+        {
+            get { return _isDataUpdated; } 
+            set { _isDataUpdated = value; }
+        }
 
         public Facade()
         {
-            Initialize();
-            GenerateData();
+            connectionMultiplexer = ConnectionMultiplexer.Connect("127.0.0.1:6379,password=password");
+            subscriber = connectionMultiplexer.GetSubscriber();
+            subscriber.Subscribe("messages", (channel, message) => {
+                Console.WriteLine((string)message);
+                _isDataUpdated = true; 
+            });
         }
 
-        private void Initialize()
+        public void Shutdown()
         {
-            try
-            {
-                ConnectionMultiplexer connectionMultiplexer = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase cache = connectionMultiplexer.GetDatabase();
-                cache.KeyDelete("airlines");
-                cache.KeyDelete("cities");
-                cache.KeyDelete("arrivals");
-                cache.KeyDelete("departures");
-                connectionMultiplexer.Close();
-            } catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-        }
-        private void GenerateData()
-        {
-            dataFactory = new Data.DataFactory();
-
-            assembler = dataFactory.GetAssembler("city");
-            Data.Importers.AImporter importer = new Data.Importers.CityImporter();
-            importer.ImportData(assembler);
-
-            assembler = dataFactory.GetAssembler("airline");
-            importer = new Data.Importers.AirlineImporter();
-            importer.ImportData(assembler);
-
-            assembler = dataFactory.GetAssembler("schedule");
-            importer = new Data.Importers.ScheduleImporter();
-            importer.ImportData(assembler);
+            connectionMultiplexer.Close();
         }
 
         public Dictionary<string, List<string>> GetScheduleData(DateTime now)
@@ -64,7 +45,6 @@ namespace Novetta.LearningProject.Ingress.DAL
             schedules.Add("arrivals", new List<string>());
             schedules.Add("departures", new List<string>());
 
-            connectionMultiplexer = ConnectionMultiplexer.Connect("127.0.0.1:6379,password=password");
             database = connectionMultiplexer.GetDatabase();
 
             var manager = new RedisManagerPool("localhost:6379");
@@ -99,7 +79,6 @@ namespace Novetta.LearningProject.Ingress.DAL
                 {
                     continue;
                 }
-
             }
             return result;
         }

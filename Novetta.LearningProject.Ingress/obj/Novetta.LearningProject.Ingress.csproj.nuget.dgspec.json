@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj": {}
+    "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj": {
+    "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\Novetta.LearningProject.CustomTypes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
-        "projectName": "Novetta.LearningProject.Ingress",
-        "projectPath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
+        "projectUniqueName": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\Novetta.LearningProject.CustomTypes.csproj",
+        "projectName": "Novetta.LearningProject.CustomTypes",
+        "projectPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\Novetta.LearningProject.CustomTypes.csproj",
         "packagesPath": "C:\\Users\\adam_\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\obj\\",
+        "outputPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -32,6 +32,68 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
+        "projectName": "Novetta.LearningProject.Ingress",
+        "projectPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
+        "packagesPath": "C:\\Users\\adam_\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adam_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\Novetta.LearningProject.CustomTypes.csproj": {
+                "projectPath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.CustomTypes\\Novetta.LearningProject.CustomTypes.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -80,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

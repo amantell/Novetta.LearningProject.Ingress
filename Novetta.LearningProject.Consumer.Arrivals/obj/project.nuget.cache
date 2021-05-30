@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "umi7MyUPwqWPKM+pvsivrGP0znaJo6qyAKJszsm+IWb8Xf+39tdziU8VP6UKFAh20qUvzN0cUPl0SElCEITafA==",
+  "dgSpecHash": "m6bCzYHw5t3hX+Y/lZTFpqxWJtdZbgAIxuxsfxI09X/0rqG8u+z4wEVPPHxnAbd2T+sZodtwJ3g8FokZtarkPg==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Arrivals\\Novetta.LearningProject.Consumer.Arrivals.csproj",
+  "projectFilePath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Consumer.Arrivals\\Novetta.LearningProject.Consumer.Arrivals.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adam_\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\adam_\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",

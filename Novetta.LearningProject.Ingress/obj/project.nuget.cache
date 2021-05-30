@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DdmXQUmNgqJq8RqYtENAOJVhPiW+2hSH3yKLuLO8uNVxgcKJEbzqG2cjBgmXBXCu796AqQPs0RgX7OV9Qa3iaA==",
+  "dgSpecHash": "m4c45cW04yBen3e5NWAHM8qSO+8DD3ZlkSIYmVAxakyGZtJ0UJARlqhNiIyc+0AC5mZjyUeT5v+O/Z/Ele4N9w==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
+  "projectFilePath": "C:\\Projects\\Novetta.LearningProject\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress\\Novetta.LearningProject.Ingress.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adam_\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.1.1\\microsoft.aspnetcore.cryptography.internal.2.1.1.nupkg.sha512",
     "C:\\Users\\adam_\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\2.1.1\\microsoft.aspnetcore.cryptography.keyderivation.2.1.1.nupkg.sha512",

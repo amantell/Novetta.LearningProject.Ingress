@@ -6,19 +6,20 @@ using System.Data;
 using Newtonsoft.Json;
 using System.Dynamic;
 using ServiceStack;
+using System.Collections.Generic;
 
 namespace Novetta.LearningProject.Ingress.Commands
 {
     class PublishCommand : ACommand
     {
         ConnectionFactory _factory;
-        ACommand _lowerChain;
         byte[] _encodedArrivals;
         byte[] _encodedDepartures;
+        Dictionary<string, List<string>> _data;
 
-        public PublishCommand(ACommand command)
+        public PublishCommand(Dictionary<string, List<string>> data)
         {
-            _lowerChain = command;
+            _data = data;
             _factory = new ConnectionFactory() { HostName = "localhost" };
         }
 
@@ -39,21 +40,16 @@ namespace Novetta.LearningProject.Ingress.Commands
 
         private bool PrepareData()
         {
-            if (!(_lowerChain is DataCommand)) return false;
-            if (_lowerChain is DataCommand dataCommand)
+            try
             {
-                try
-                {
-                    var arrivals = dataCommand.Data["arrivals"];
-                    var departures = dataCommand.Data["departures"];
+                var arrivals = _data["arrivals"];
+                var departures = _data["departures"];
 
-                    _encodedArrivals = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(arrivals));
-                    _encodedDepartures = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(departures));
-                } catch (Exception exception)
-                {
-                    _lowerChain.Error = exception.Message;
-                    return false;
-                }
+                _encodedArrivals = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(arrivals));
+                _encodedDepartures = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(departures));
+            } catch (Exception exception)
+            {
+                return false;
             }
             return true;
         }
@@ -68,7 +64,6 @@ namespace Novetta.LearningProject.Ingress.Commands
             }
             catch (Exception exception)
             {
-                _lowerChain.Error = exception.Message;
                 return false;
             }
         }

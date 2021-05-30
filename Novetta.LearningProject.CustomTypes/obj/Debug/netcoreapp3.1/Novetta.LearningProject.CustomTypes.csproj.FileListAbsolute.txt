@@ -1,0 +1,9 @@
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\bin\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.deps.json
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\bin\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.dll
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\bin\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.pdb
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\obj\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.AssemblyInfoInputs.cache
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\obj\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.AssemblyInfo.cs
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\obj\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.csproj.CoreCompileInputs.cache
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\obj\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.dll
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\obj\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.pdb
+C:\Projects\Novetta.LearningProject\Novetta.LearningProject.Ingress\Novetta.LearningProject.CustomTypes\obj\Debug\netcoreapp3.1\Novetta.LearningProject.CustomTypes.csprojAssemblyReference.cache
